@@ -1,12 +1,16 @@
 {
-	"perl"		: "6.*",
-	"name"		: "IO::Capture::Simple",
-	"version"	: "0.0.1",
-	"description"	: "IO can be captured",
-	"provides"	: {
-		"Test::IO::Capture"	: "lib/Test/IO/Capture.pm6",
-		"IO::Capture::Simple"	: "lib/IO/Capture/Simple.pm6"
-	},
-	"depends"	: [],
-	"source-url"	: "git://github.com/sergot/IO-Capture-Simple.git"
+    "perl"		: "6.c",
+    "name"		: "IO::Capture::Simple",
+    "version"	: "0.0.1",
+    "description"	: "IO can be captured and tested",
+    "provides"	: {
+	"Test::IO::Capture"	: "lib/Test/IO/Capture.pm6",
+	"IO::Capture::Simple"	: "lib/IO/Capture/Simple.pm6"
+    },
+    "depends"	: [],
+    "license" : "Artistic-2.0",
+    "source-url"	: "git://github.com/JJ/IO-Capture-Simple.git",
+     "authors" : [
+        "Filip Sergot"
+    ]
 }
