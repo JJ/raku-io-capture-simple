@@ -9,7 +9,7 @@
     },
     "depends"	: [],
     "license" : "Artistic-2.0",
-    "source-url"	: "git://github.com/JJ/IO-Capture-Simple.git",
+    "source-url"	: "git://github.com/JJ/raku-io-capture-simple.git",
      "authors" : [
         "Filip Sergot"
     ]
