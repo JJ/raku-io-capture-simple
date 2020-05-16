@@ -1,7 +1,7 @@
 {
     "perl"		: "6.c",
     "name"		: "IO::Capture::Simple",
-    "version"	: "0.0.1",
+    "version"	        :  "v0.0.1",
     "description"	: "IO can be captured and tested",
     "provides"	: {
 	"Test::IO::Capture"	: "lib/Test/IO/Capture.pm6",
