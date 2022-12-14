@@ -7,4 +7,4 @@ my $test = "OH HAI!";
 
 my @r = capture { say $test; note $test;};
 
-@r[^1].map: { is  $_ , "$test\n", "$test in captured string" };
+@r[^2].map: { is  $_ , "$test\n", "$test in captured string" };
