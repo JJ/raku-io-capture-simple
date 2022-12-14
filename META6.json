@@ -1,15 +1,16 @@
 {
     "name": "IO::Capture::Simple",
-    "version"	        :  "v0.0.1",
-    "description"	: "IO can be captured and tested",
+    "version":  "v0.0.2",
+    "description": "IO can be captured and tested",
     "provides"	: {
-        "Test::IO::Capture"	: "lib/Test/IO/Capture.pm6",
-        "IO::Capture::Simple"	: "lib/IO/Capture/Simple.pm6"
+        "Test::IO::Capture": "lib/Test/IO/Capture.pm6",
+        "IO::Capture::Simple": "lib/IO/Capture/Simple.pm6"
     },
-    "depends": [],
+    "auth": "zef:jjmerelo",
     "license" : "Artistic-2.0",
     "source-url": "git://github.com/JJ/raku-io-capture-simple.git",
      "authors" : [
-        "Filip Sergot"
+         "Filip Sergot",
+         "JJ Merelo"
     ]
 }
