@@ -11,4 +11,5 @@ This module was created originally by [Filip Sergot](https://github.com/sergot/I
 ## License
 
 
-This code is (c) Filip Sergot, 2018. It's released under the Artistic 2.0 license.
+This code is (c) Filip Sergot, 2018, JJ Merelo 2022. It's released under the
+ Artistic 2.0 license.
