@@ -2,10 +2,9 @@ unit module IO::Capture::Simple;
 
 my $stdout = $*OUT;
 my $stderr = $*ERR;
-my $stdin = $*IN;
 
 sub capture(Callable $code) is export {
-    my ($out, $err;
+    my ($out, $err);
 
     capture_on($out, $err );
     $code.();
