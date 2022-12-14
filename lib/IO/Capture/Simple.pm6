@@ -5,25 +5,23 @@ my $stderr = $*ERR;
 my $stdin = $*IN;
 
 sub capture(Callable $code) is export {
-    my ($out, $err, $in);
+    my ($out, $err;
 
-    capture_on($out, $err, $in);
+    capture_on($out, $err );
     $code.();
     capture_off;
 
-    $out, $err, $in;
+    $out, $err ;
 }
 
-sub capture_on($out is rw, $err is rw, $in is rw) is export {
+sub capture_on($out is rw, $err is rw ) is export {
     capture_stdout_on($out);
     capture_stderr_on($err);
-    capture_stdin_on($in);
 }
 
 sub capture_off is export {
     $*OUT = $stdout;
     $*ERR = $stderr;
-    $*IN = $stdin;
 }
 
 sub capture_stdout(Callable $code) is export {
@@ -78,30 +76,4 @@ sub capture_stderr_on($target is rw) is export {
 
 sub capture_stderr_off is export {
     $*ERR = $stderr;
-}
-
-sub capture_stdin(Callable $code) is export {
-    my $result;
-
-    my $*IN = class {
-        method get() {
-            $result ~= $stdin.get;
-        }
-    }
-
-    $code.();
-
-    $result;
-}
-
-sub capture_stdin_on($target is rw) is export {
-    $*IN = class {
-        method get() {
-            $target ~= $stdin.get;
-        }
-    }
-}
-
-sub capture_stdin_off is export {
-    $*IN = $stdin;
 }
